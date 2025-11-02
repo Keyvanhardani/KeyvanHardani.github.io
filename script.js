@@ -114,7 +114,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // ===================================
 const typedTextElement = document.getElementById('typed-text');
 const textArray = [
-    'PhD Student in AI Safety',
+    'AI Safety Researcher',
     'Adversarial ML Researcher',
     'Automotive Cybersecurity Expert',
     'Open Source Contributor'
