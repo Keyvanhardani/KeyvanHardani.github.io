@@ -117,7 +117,8 @@ const textArray = [
     'AI Safety Researcher',
     'Adversarial ML Researcher',
     'Automotive Cybersecurity Expert',
-    'Open Source Contributor'
+    'Open Source Contributor',
+    'IEEE Member'
 ];
 let textArrayIndex = 0;
 let charIndex = 0;
