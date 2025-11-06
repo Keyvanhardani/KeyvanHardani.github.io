@@ -1,45 +1,34 @@
-# Keyvan Hardani - Personal Website
+# Keyvan Hardani - Academic Portfolio
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?style=flat-square&logo=github)](https://keyvanhardani.github.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+Personal academic portfolio website showcasing research in AI Safety, Adversarial Machine Learning, and Neuromorphic Computing.
 
-## 🎯 About
+## About
 
-Personal academic website showcasing research in AI Safety, Adversarial Machine Learning, and Automotive Cybersecurity.
+This is the personal website of Keyvan Hardani, a researcher based in Munich, Germany. The site features:
 
-**Live Site:** [keyvanhardani.github.io](https://keyvanhardani.github.io)
+- Research interests and areas
+- Publications and academic work
+- Selected research projects
+- Contact information and professional links
 
-## 🚀 Features
+## Visit
 
-- **Modern Design**: Glassmorphism UI with gradient accents
-- **Particle Background**: Interactive particle.js animation
-- **Smooth Animations**: AOS (Animate On Scroll) integration
-- **Responsive**: Mobile-first design
-- **Fast Loading**: Optimized assets and minimal dependencies
-- **SEO Optimized**: Meta tags and structured data
+The website is live at: [keyvan.ai](https://keyvan.ai)
 
-## 📂 Structure
+## Technical Details
 
-```
-KeyvanHardani.github.io/
-├── index.html          # Main HTML file
-├── styles.css          # Styling
-├── script.js           # JavaScript & animations
-├── assets/             # Images and media
-│   └── profile.jpg     # Profile picture
-└── README.md           # This file
-```
+- Clean, academic design inspired by classic researcher portfolios
+- Responsive layout for all devices
+- Minimal JavaScript for smooth navigation
+- Optimized for readability and academic presentation
 
-## 🛠️ Tech Stack
+## Links
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom properties, Grid, Flexbox
-- **JavaScript** - Vanilla JS
-- **Particles.js** - Background animation
-- **AOS** - Scroll animations
-- **Font Awesome** - Icons
-- **Google Fonts** - Inter & JetBrains Mono
+- [Google Scholar](https://scholar.google.com/citations?user=ttXn0d0AAAAJ)
+- [GitHub](https://github.com/KeyvanHardani)
+- [ResearchGate](https://www.researchgate.net/profile/Keyvan-Hardani)
+- [ORCID](https://orcid.org/0009-0000-6003-8826)
 
-## 📝 Setup
+---
 
-1. **Clone the repository:**
+© 2025 Keyvan Hardani. All rights reserved.
