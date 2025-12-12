@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - German OCR Engine | Keyvan Hardani</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(145deg, #1e2a3a, #0d1520);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 3px solid rgba(0, 102, 204, 0.5);
+            box-shadow: 0 0 40px rgba(0, 102, 204, 0.2);
+        }
+
+        .logo span {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4a9eff, #0066cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #1a1a1a;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 16px;
+        }
+
+        /* Main Card */
+        .card {
+            background: linear-gradient(145deg, #1a1a24, #12121a);
+            border-radius: 20px;
+            padding: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .card h2 i {
+            color: #4a9eff;
+            margin-right: 12px;
+        }
+
+        .card p {
+            color: #a0a0a0;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* Feedback Options */
+        .feedback-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .feedback-btn {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            background: linear-gradient(145deg, #242432, #1a1a24);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            text-decoration: none;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .feedback-btn:hover {
+            transform: translateY(-3px);
+            border-color: #4a9eff;
+            box-shadow: 0 10px 30px rgba(74, 158, 255, 0.15);
+        }
+
+        .feedback-btn i {
+            font-size: 24px;
+            margin-right: 18px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .feedback-btn.email i { color: #4a9eff; }
+        .feedback-btn.bug i { color: #e74c3c; }
+        .feedback-btn.feature i { color: #2ecc71; }
+        .feedback-btn.github i { color: #f0f0f0; }
+
+        .feedback-btn .text {
+            flex: 1;
+        }
+
+        .feedback-btn .text strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .feedback-btn .text span {
+            font-size: 13px;
+            color: #707070;
+        }
+
+        .feedback-btn .arrow {
+            font-size: 18px;
+            color: #505050;
+            transition: transform 0.3s ease;
+        }
+
+        .feedback-btn:hover .arrow {
+            transform: translateX(5px);
+            color: #4a9eff;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: rgba(74, 158, 255, 0.08);
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            border-radius: 14px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .info-section h3 {
+            color: #4a9eff;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .info-section ul {
+            list-style: none;
+            color: #a0a0a0;
+            font-size: 14px;
+        }
+
+        .info-section li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-section li::before {
+            content: "•";
+            color: #4a9eff;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Back Link */
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: #707070;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: #4a9eff;
+        }
+
+        .back-link a i {
+            margin-right: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: #505050;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #707070;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #4a9eff;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .title {
+                font-size: 26px;
+            }
+
+            .feedback-btn {
+                padding: 15px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <span>G</span>
+            </div>
+            <h1 class="title">German OCR Engine</h1>
+            <div class="badge">TECH PREVIEW</div>
+            <p class="subtitle">Feedback & Support</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card">
+            <h2><i class="fas fa-comment-dots"></i> Ihr Feedback</h2>
+            <p>
+                Vielen Dank für Ihr Interesse an German OCR Engine! Ihr Feedback hilft uns,
+                die Engine kontinuierlich zu verbessern. Wählen Sie eine der folgenden Optionen:
+            </p>
+
+            <div class="feedback-options">
+                <a href="mailto:hello@keyvan.ai?subject=German OCR Engine Feedback&body=Hallo,%0A%0AIch möchte folgendes Feedback zur German OCR Engine geben:%0A%0A" class="feedback-btn email">
+                    <i class="fas fa-envelope"></i>
+                    <div class="text">
+                        <strong>Allgemeines Feedback</strong>
+                        <span>Ideen, Lob oder Verbesserungsvorschläge</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="mailto:hello@keyvan.ai?subject=[Bug Report] German OCR Engine&body=Hallo,%0A%0AIch möchte folgenden Fehler melden:%0A%0ABeschreibung:%0A%0ASchritte zur Reproduktion:%0A1.%0A2.%0A3.%0A%0AErwartetes Verhalten:%0A%0ATatsächliches Verhalten:%0A%0ASystem: Windows 10/11%0A" class="feedback-btn bug">
+                    <i class="fas fa-bug"></i>
+                    <div class="text">
+                        <strong>Bug melden</strong>
+                        <span>Fehler oder technische Probleme</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="mailto:hello@keyvan.ai?subject=[Feature Request] German OCR Engine&body=Hallo,%0A%0AIch hätte folgenden Feature-Wunsch für German OCR Engine:%0A%0ABeschreibung der Funktion:%0A%0AWarum wäre diese Funktion nützlich?%0A%0A" class="feedback-btn feature">
+                    <i class="fas fa-lightbulb"></i>
+                    <div class="text">
+                        <strong>Feature-Wunsch</strong>
+                        <span>Neue Funktionen vorschlagen</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+
+                <a href="https://github.com/Keyvanhardani/German-OCR-Engine/issues" target="_blank" class="feedback-btn github">
+                    <i class="fab fa-github"></i>
+                    <div class="text">
+                        <strong>GitHub Issues</strong>
+                        <span>Öffentliche Bug-Reports & Diskussionen</span>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </a>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h3><i class="fas fa-info-circle"></i> Bei Bug-Reports bitte angeben:</h3>
+                <ul>
+                    <li>Windows-Version (10/11)</li>
+                    <li>Schritte zur Reproduktion des Fehlers</li>
+                    <li>Screenshot (wenn möglich)</li>
+                    <li>Art des Dokuments (Rechnung, Formular, etc.)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Back Link -->
+        <div class="back-link">
+            <a href="https://keyvan.ai">
+                <i class="fas fa-arrow-left"></i> Zurück zu keyvan.ai
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 <a href="https://keyvan.ai">Keyvan Hardani</a>. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="https://linkedin.com/in/keyvanhardani" target="_blank"><i class="fab fa-linkedin"></i></a>
+                &nbsp;&nbsp;
+                <a href="https://github.com/KeyvanHardani" target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

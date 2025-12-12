@@ -124,12 +124,14 @@
                 <!-- News -->
                 <h2><i class="fas fa-newspaper"></i> News</h2>
                 <ul>
+                    <li>[2025.12] <strong>German-OCR-Engine</strong> Tech Preview released - Native C++ desktop app for local document OCR</li>
+                    <li>[2025.12] <strong>German-OCR-Turbo</strong> published - 3x faster than DeepSeek-OCR, 256K context</li>
+                    <li>[2025.12] German-OCR model family released on Ollama and HuggingFace</li>
                     <li>[2025.01] CVE-2025-0990 (CSRF vulnerability) published - CVSS 4.3</li>
                     <li>[2024.11] SecIDS-CNN model published on Hugging Face with 97.72% accuracy</li>
                     <li>[2024.10] Master Thesis completed on trojaned AI models and defense strategies</li>
                     <li>[2024.09] Joined IEEE focusing on AI Safety and Cybersecurity standards</li>
                     <li>[2024.05] Started Team Lead position at MAN Truck & Bus for HiL Security</li>
-                    <li>[2023.12] AI-Driven SIEM system published with real-time threat detection</li>
                 </ul>
                 
                 <!-- Selected Publications -->
@@ -160,6 +162,48 @@
                     </li>
                 </ul>
                 
+                <!-- German-OCR: Vision-Language Models for Document Processing -->
+                <h2><i class="fas fa-file-invoice"></i> German-OCR: Vision-Language Models for Document Processing</h2>
+                <p>
+                    A family of fine-tuned Vision-Language Models (VLMs) specifically optimized for precise text recognition
+                    from German documents including invoices, forms, contracts, and business documents. All models output
+                    structured data in Markdown, JSON, or HTML format and are designed for privacy-first, local deployment.
+                </p>
+
+                <ul class="publications">
+                    <li>
+                        <strong>German-OCR-Turbo</strong> - High-Speed Document OCR (Qwen3-VL-2B)
+                        [<a href="https://ollama.com/Keyvan/german-ocr-turbo" target="_blank">Ollama</a>]
+                        [<a href="https://huggingface.co/Keyven/german-ocr-turbo" target="_blank">HuggingFace</a>]
+                        <br>
+                        <em>3x faster than DeepSeek-OCR, ~5s/document on GPU, 100% accuracy on German invoices.
+                        1.9GB model with 256K context window.</em>
+                    </li>
+                    <li>
+                        <strong>German-OCR</strong> - Precision Document OCR (Qwen2-VL-2B)
+                        [<a href="https://ollama.com/Keyvan/german-ocr" target="_blank">Ollama</a>]
+                        [<a href="https://huggingface.co/Keyven/german-ocr" target="_blank">HuggingFace</a>]
+                        <br>
+                        <em>Fine-tuned with QLoRA (4-bit), 125K context window, optimized for structured Markdown output.
+                        Apache 2.0 licensed.</em>
+                    </li>
+                    <li>
+                        <strong>German-OCR-3B</strong> - Extended Capacity Model (Qwen2.5-VL-3B)
+                        [<a href="https://ollama.com/Keyvan/german-ocr" target="_blank">Ollama</a>]
+                        [<a href="https://huggingface.co/Keyven/german-ocr" target="_blank">HuggingFace</a>]
+                        <br>
+                        <em>7.5GB model for complex multi-page documents and enhanced semantic understanding.</em>
+                    </li>
+                    <li>
+                        <strong>German-OCR-Engine</strong> - Desktop Application (Tech Preview)
+                        [<a href="https://github.com/Keyvanhardani/German-OCR-Engine" target="_blank">GitHub</a>]
+                        [<a href="https://keyvan.ai/feedback-German-OCR" target="_blank">Feedback</a>]
+                        <br>
+                        <em>Native C++/Qt6 desktop application with encrypted model deployment, llama.cpp inference,
+                        and GPU acceleration. Privacy-first design with zero cloud dependencies.</em>
+                    </li>
+                </ul>
+
                 <!-- AI Models & Projects -->
                 <h2><i class="fas fa-brain"></i> AI Models & Research Projects</h2>
                 <ul class="publications">
@@ -169,16 +213,20 @@
                         [<a href="https://github.com/KeyvanHardani/SecIDS-CNN" target="_blank">GitHub</a>]
                     </li>
                     <li>
+                        <strong>SecIDS-v2</strong> - Enhanced Intrusion Detection with Improved Feature Engineering
+                        [<a href="https://huggingface.co/Keyven/SecIDS-v2" target="_blank">HuggingFace</a>]
+                    </li>
+                    <li>
                         <strong>CANDefender-Fuzzy</strong> - LSTM-based Fuzzy Attack Detection for CAN Bus (94.09% accuracy)
-                        [<a href="https://huggingface.co/Keyven" target="_blank">HuggingFace</a>]
+                        [<a href="https://huggingface.co/Keyven/CanDefender-Fuzzy" target="_blank">HuggingFace</a>]
                     </li>
                     <li>
                         <strong>CANDefender-DoS</strong> - LSTM-based DoS Attack Detection for CAN Bus (94.06% accuracy)
-                        [<a href="https://huggingface.co/Keyven" target="_blank">HuggingFace</a>]
+                        [<a href="https://huggingface.co/Keyven/CANDefender-DoS" target="_blank">HuggingFace</a>]
                     </li>
                     <li>
                         <strong>AnomalyDetection-MVTech-Metal</strong> - Deep Learning for Industrial Quality Control
-                        [<a href="https://huggingface.co/Keyven" target="_blank">HuggingFace</a>]
+                        [<a href="https://huggingface.co/Keyven/AnomalyDetection-MVTech-Metal" target="_blank">HuggingFace</a>]
                     </li>
                     <li>
                         <strong>Vulna v4.0</strong> - AI-Powered Penetration Testing Framework
@@ -287,7 +335,7 @@
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 Keyvan Hardani. All rights reserved.</p>
-        <p class="footer-note">Last updated: November 2025</p>
+        <p class="footer-note">Last updated: December 2025</p>
     </div>
 </body>
 </html>
